@@ -19,6 +19,8 @@ You just need to create an instance o' this class before the admin loads & the c
 
 ## Example
 
+	use WaughJ\WPMetaBox\WPMetaBox;
+
 	new WPMetaBox
 	(
 		'color',
