@@ -16,7 +16,14 @@ namespace WaughJ\WPMetaBox
 			{
 				$this->slug = $slug;
 				$this->title = $title;
-				$this->page_type = TestHashItemString( $extra_attributes, 'page-type', 'page' );
+				$this->post_type = TestHashItemExists( $extra_attributes, 'post-type', [ 'page' ] );
+
+				// If singular, make it an array with singlular as only child.
+				if ( !is_array( $this->post_type ) )
+				{
+					$this->post_type = [ $this->post_type ];
+				}
+
 				$this->input_type = TestHashItemString( $extra_attributes, 'input-type', 'text' );
 				$this->other_arguments = $extra_attributes;
 				$this->addActions();
@@ -29,7 +36,7 @@ namespace WaughJ\WPMetaBox
 					$this->slug,
 					__( $this->title, 'cesi' ),
 					[ $this, 'drawGUI' ],
-					$this->page_type,
+					$this->post_type,
 					'normal',
 					'high'
 				);
@@ -195,7 +202,7 @@ namespace WaughJ\WPMetaBox
 
 			private function testPostIsRightType() : bool
 			{
-				return isset( $_POST[ 'post_type' ] ) && $this->page_type == $_POST[ 'post_type' ];
+				return isset( $_POST[ 'post_type' ] ) && $this->post_type == $_POST[ 'post_type' ];
 			}
 
 			private function testIsValidNonce() : bool
@@ -217,7 +224,7 @@ namespace WaughJ\WPMetaBox
 
 			private $slug;
 			private $name;
-			private $page_type;
+			private $post_type;
 			private $input_type;
 			private $other_arguments;
 
