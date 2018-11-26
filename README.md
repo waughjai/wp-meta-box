@@ -19,18 +19,18 @@ You just need to create an instance o' this class before the admin loads & the c
 
 ## Example
 
-`new WPMetaBox
-(
-	'color',
-	'Color',
-	[
-		'post-type' => 'news-post',
-		'input-type' => 'select',
-		'values' =>
+	new WPMetaBox
+	(
+		'color',
+		'Color',
 		[
-			[ 'id' => '0', 'name' => 'Red' ],
-			[ 'id' => '1', 'name' => 'Blue' ],
-			[ 'id' => '2', 'name' => 'Green' ]
+			'post-type' => 'news-post',
+			'input-type' => 'select',
+			'values' =>
+			[
+				[ 'id' => '0', 'name' => 'Red' ],
+				[ 'id' => '1', 'name' => 'Blue' ],
+				[ 'id' => '2', 'name' => 'Green' ]
+			]
 		]
-	]
-);`
+	);
