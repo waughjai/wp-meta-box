@@ -4,6 +4,7 @@ declare( strict_types = 1 );
 namespace WaughJ\WPMetaBox
 {
 	use function WaughJ\TestHashItem\TestHashItemString;
+	use function WaughJ\TestHashItem\TestHashItemExists;
 
 	class WPMetaBox
 	{
