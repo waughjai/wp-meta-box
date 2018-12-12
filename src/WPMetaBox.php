@@ -203,7 +203,7 @@ namespace WaughJ\WPMetaBox
 
 			private function testPostIsRightType() : bool
 			{
-				return isset( $_POST[ 'post_type' ] ) && $this->post_type == $_POST[ 'post_type' ];
+				return isset( $_POST[ 'post_type' ] ) && in_array( $_POST[ 'post_type' ], $this->post_type );
 			}
 
 			private function testIsValidNonce() : bool
