@@ -48,4 +48,11 @@ class WPMetaBoxTest extends TestCase
 		$post = getDemoPost();
 		$this->assertEquals( $meta_box->getInputContent( $post ), '<select id="scrum-drum" name="scrum-drum"><option value="0" label="Red">Red</option><option value="1" label="Blue">Blue</option><option value="2" label="Green">Green</option></select>' );
 	}
+
+	public function testGetValue()
+	{
+		$meta_box = new WPMetaBox( 'scrum-drum', 'Sassafrass' );
+		$post = getDemoPost();
+		$this->assertEquals( $meta_box->getValue( $post->ID ), get_post_meta( $post->ID, 'scrum-drum', true ) );
+	}
 }

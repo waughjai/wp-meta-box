@@ -73,6 +73,15 @@ namespace WaughJ\WPMetaBox
 				return $this->title;
 			}
 
+			public function getValue( $id, bool $singular = true )
+			{
+				if ( $id === null )
+				{
+					$id = get_the_ID();
+				}
+				return get_post_meta( $id, $this->slug, $singular );
+			}
+
 			public function getInputContent( \WP_Post $post ) : string
 			{
 				ob_start();
