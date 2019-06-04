@@ -36,3 +36,11 @@ You just need to create an instance o' this class before the admin loads & the c
 			]
 		]
 	);
+
+## Changelog
+
+### 0.2.0
+* Add getValue Method
+
+### 0.1.0
+* Initial Version

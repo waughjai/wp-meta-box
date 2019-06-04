@@ -2,7 +2,7 @@
     "name": "waughj/wp-meta-box",
     "description": "Simple class for easily adding meta boxes for WordPress admin editors.",
     "keywords": [ "wordpress", "meta", "meta box" ],
-    "license": "GPL-2.0-or-later",
+    "license": "AGPL-3.0-or-later",
     "authors": [
         {
             "name": "Jaimeson Waugh",
@@ -11,11 +11,11 @@
     ],
     "type": "library",
     "require": {
-		"php": ">=7.0",
-		"waughj/test-hash-item": ">=1.0.1"
+		"php": ">=7.2",
+		"waughj/test-hash-item": ">=2.0.0"
     },
     "require-dev": {
-		"phpunit/phpunit": "6.*"
+		"phpunit/phpunit": "*"
     },
     "autoload": {
         "psr-4": {
