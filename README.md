@@ -39,6 +39,10 @@ You just need to create an instance o' this class before the admin loads & the c
 
 ## Changelog
 
+### 0.3.0
+* Change input IDs to have “-input” appended to them to prevent collision with outer box
+	* WordPress automatically applies our the meta box slug to the outer box of the input box beyond our control, so we have to change the ID of the inner input box to prevent multiple elements with the same ID, which is invalid HTML
+
 ### 0.2.0
 * Add getValue Method
 

@@ -176,7 +176,7 @@ class WPMetaBox
 
 		private function printIDAttribute() : void
 		{
-			?>id="<?= $this->slug; ?>"<?php
+			?>id="<?= $this->slug; ?>-input"<?php
 		}
 
 		private function printNameAttribute() : void
