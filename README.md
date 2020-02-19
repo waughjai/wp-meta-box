@@ -43,8 +43,27 @@ You just need to create an instance o' this class before the admin loads & the c
 * Change input IDs to have “-input” appended to them to prevent collision with outer box
 	* WordPress automatically applies our the meta box slug to the outer box of the input box beyond our control, so we have to change the ID of the inner input box to prevent multiple elements with the same ID, which is invalid HTML
 
+### 0.2.1
+* Update TestHashItem dependency
+
 ### 0.2.0
 * Add getValue Method
+
+### 0.1.4
+* Fix Saving
+
+### 0.1.3
+* Fix Missing Use Statement Bug
+	* Missing "use" statement caused constructor to fail
+
+### 0.1.2
+* Fix Example in Readme
+	* Example didn't use "use" statement to include full class name with namespace, which in most cases will cause an error in code if used. This adds the "use" statement to the example for better clarification
+
+### 0.1.1
+* Improve Argument Name & Readme
+	* Change "page-type" argument to "post-type" to make it mo' consistent & predictable with WordPress name for concept
+	* Also adds detailed instructions to readme
 
 ### 0.1.0
 * Initial Version
